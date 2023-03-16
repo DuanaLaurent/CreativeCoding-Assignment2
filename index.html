@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A website that generates food options based on your mood">
+    <meta name="authoe" content="Duana Laurent">
+    <meta name="keywords" content="food, mood, restaurants, food ideas">
+    <title>Food Mood</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <!--This section will appear first on the page-->
+        <h1>Welcome to Food Mood.</h1>
+
+        <div id="header-text">
+            <h2>Tired of trying to figure out what you should eat?</h2>
+            <h3>Choose a mood and we'll find you good food in the GTA!</h3>
+            
+            <button onclick="showMood()">Let's Do It!</button>
+        </div>
+
+    </header>
+    
+    <main>
+        <!--This section takes the choice for the food craving-->
+        <div class="user-selection">
+            <div id="mood">
+                <p class="heading">What are you craving for?</p> <br>
+                <div class="choices">
+                    <input type="radio" id="healthy" name="mood_selection" value="healthy">
+                    <label for="healthy">Something Healthy</label>
+
+                    <input type="radio" id="junk" name="mood_selection" value="junk">
+                    <label for="junk">Fast Food</label>
+
+                    <input type="radio" id="fancy" name="mood_selection" value="fancy">
+                    <label for="fancy">Fine Dining</label>
+
+                    <div id="mood-send">
+                        <input class="send" type="submit" value="Next" onclick="showBudget()">
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+        <!--This section takes the user's budget selection-->
+        <div class="user-selection">
+            <div id="budget">
+                <p class="heading">How much are you willing to spend?</p> <br>
+                <div class="choices">
+                     <input type="radio" id="cheap" name="budget_selection" value="cheap">
+                    <label for="cheap">As little as possible</label>
+    
+                    <input type="radio" id="average" name="budget_selection" value="average">
+                    <label for="average">I got a bit to spend</label>
+    
+                    <input type="radio" id="expensive" name="budget_selection" value="expensive">
+                    <label for="fancy">I'll splurge if it tastes good</label>
+    
+                    <div id="budget-send">
+                        <input  class="send" type="submit" value="Find Me Food" onclick="generateOptions()" >
+                    </div>
+                    <hr>
+                </div>
+            </div>
+                
+        </div>
+
+        <!--This section is where the response will be displayed from Javascript-->
+        <div>
+            <p id="answer"></p>
+            <div id="end-buttons">
+                <!--This will give the user another option on click-->
+                <input class="send" id="redo" type="submit" value="Another option please" onclick="generateOptions()">
+                <!--Page reload syntax taken from W3Schools-->
+                <input class="send" id="restart" type="submit" value="Let me start over" onclick="location.reload()">
+            </div>
+            
+        </div>
+        
+    </main>
+
+    <!--Footer section-->
+    <footer>
+       <p>Concept & Design by Duana Laurent</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+/*Custom font from Google*/
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+/*Setting font size for page elements*/
+body {
+    font-family: 'Questrial', sans-serif;
+    text-align: center;
+    background-image: url(images/main-bg.png);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+
+header {
+    margin: 10% auto;
+}
+
+button {
+    font-size: 1.2em;
+    padding: 5px 15px;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.heading{
+    margin: 30px auto 20px;
+    font-size: 3em;
+}
+
+#budget, #mood { /* Sets the default setting of the user selection to hide*/
+    display: none;
+}
+
+label { 
+    font-size: 1.5em;
+    padding-right: 3%;
+}
+
+.choices {
+    padding: 3%;
+}
+
+.send {
+    margin-top: 2%;
+    font-size: 1.2em;
+}
+
+#answer {
+    font-size: 2em;
+}
+
+#end-buttons {
+    display: none;
+}
+
+.send {
+    font-size: 1.5em;
+    padding: 1% 4%;
+}
+
+footer {
+    padding: 7% 2%;
+}
+
+hr {
+    margin: 4%;
+}
+/* Concept for animation taken from  https://blog.hubspot.com/website/css-fade-in?hubs_content=blog.hubspot.com%2Fwebsite%2Fcss-fade-in&hubs_content-cta=Fade-in%20Text%20Transition*/
+#mood, #budget { 
+    animation: fadeIn 3s;
+    -webkit-animation: fadeIn 3s;
+    -moz-animation: fadeIn 3s;
+    -o-animation: fadeIn 3s;
+    -ms-animation: fadeIn 3s;
+  }
+  
+  @keyframes fadeIn { /* keyframes to set the transition in opacity*/
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  /*This is to ensure browser compatibility of the keyframes*/
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
